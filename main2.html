@@ -1,1 +1,144 @@
-git push -f は絶対NG
+Command
+git init
+git clone <リポジトリ名>
+git clone
+git add <ファイル名>
+git add <ディレクトリ名>
+git add .
+git add
+git commit
+git commit -m "<メッセージ>"
+git commit -v
+ステージ git commit
+git status
+# git addする前の変更分
+git diﬀ
+git diﬀ <ファイル名>
+git diﬀ --staged
+# git addした後の変更分
+$ git diﬀ --staged
+git diﬀ
+git log
+git log --oneline
+git log -p index.html
+git log -n <コミット数>
+>_ ターミナル git rm
+git rm <ファイル名>
+git rm -r <ディレクトリ名>
+git rm
+git rm --cached <ファイル名>
+git mv <旧ファイル> <新ファイル>
+mv <旧ファイル> <新ファイル>
+git rm <旧ファイル>
+git add <新ファイル>
+git mv
+git remote add orign
+git remote add
+git push <リモート名> <ブランチ名>
+git push origin master
+git push
+git commit
+git conﬁg --global alias.ci commit
+git conﬁg --global alias.st status
+git conﬁg --global alias.br branch
+git conﬁg --global alias.co
+git checkout -- <ファイル名>
+git checkout -- <ディレクトリ名>
+git checkout -- .
+"--"を付けているのは、ブランチ名 git checkout
+git reset HEAD <ファイル名>
+git reset HEAD <ディレクトリ名>
+git reset HEAD
+git reset HEAD .
+git add
+git commit
+git commit --amend
+git add
+git remote
+git remote -v
+git remote add <リモート名>
+git remote add tutorial
+git remote add
+git fetch <リモート名>
+git fetch origin
+git fetch
+git merge
+git pull <リモート名> <ブランチ名>
+git pull origin master
+git pull
+git pull
+git fetch origin master
+git merge origin/master
+git remote show <リモート名>
+git remote show origin
+・git pullの挙動
+git remote コマンドより
+・git pushの挙動
+git remote rename git remote rm <リモート名>
+<旧リモート名> <新リモート名> git remote rm new_tutorial
+git remote rename
+git branch <ブランチ名>
+git branch feature
+git branch
+git branch -a
+git checkout <既存ブランチ名>
+git checkout feature
+git checkout -b <新ブランチ名>
+git merge <ブランチ名>
+git merge <リモート名/ブランチ名>
+git merge origin/master
+git branch -m <ブランチ名> git branch -d <ブランチ名>
+git branch -m new_branch git branch -d feature
+git branch -D <ブランチ名>
+git rebase <ブランチ名>
+git pull --rebase
+git pull --rebase origin master
+git fetch
+git rebase
+git conﬁg --global pull.rebase true
+# masterブランチでgit pullする時だけ
+git conﬁg branch.master.rebase
+git pullの挙動がリベース型になるよ
+git rebase -i <コミットID> # やり直したいcommitをeditにする
+git rebase -i HEAD~3 edit gh21f6d ヘッダー修正
+$ git commit --amend
+$ git rebase --continue
+git rebase -i HEAD~3 # ①84gha0dのコミットを消す
+注意してね。git logとは逆だよ。 並び替えたりできるよ。
+git rebase -i HEAD~3 # コミットを1つにまとめる
+git rebase -i HEAD~3 # コミットを分割する
+$ git reset HEAD^
+$ git add README
+$ git commit -m 'README修正'
+$ git add index.html
+$ git commit -m 'index.html修正'
+$ git rebase --continue
+git tag
+$ git tag -l "201705"
+git tagコマンドはアルファベット
+git tag -a [タグ名]
+git tag -a 20170520_01
+git tag [タグ名]
+git tag 20170520_01
+git tag [タグ名] [コミット名]
+git tag 20170520_01 8a6cbc4
+git show [タグ名] ・タグ付けした日時
+git show 20170520_01 ・注釈メッセージ
+git push [リモート名] [タグ名]
+git push origin 20170520_01
+git push origin 20170520_01
+git push origin --tags
+git stash
+git stash
+git stash save
+git stash list
+git stash apply --index
+git stash apply
+git stash apply --index
+git stash apply [スタッシュ名]
+git stash apply stash@{1}
+git stash drop
+git stash drop
+git stash drop [スタッシュ名]
+git stash drop stash@{1}
+git stash clear
